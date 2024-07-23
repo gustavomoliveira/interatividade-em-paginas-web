@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JavaScript</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        //Exemplos de criação de objetos em JS
+        
+        //Criação de um objeto literal
+        const pessoa = {
+            primeiroNome: "Gustavo",
+            ultimoNome: "de Oliveira",
+            idade: "36",
+            corOlho: "verde"
+        };
+
+        //Demonstração dos dados do objeto
+        let pDemo = document.getElementById("demo");
+        pDemo.innerHTML = pessoa.primeiroNome + " " + pessoa.ultimoNome + " tem " + pessoa.idade + " anos.";
+
+        //Segundo exemplo
+        let produto = {
+            nome: "Leite",
+            marca: "Teste Marca",
+            valorUnitario: 5.00,
+            volume: "1 litro"
+        };
+
+        //Demonstração dos dados do objeto
+        let pDemo2 = document.getElementById("demo2");
+        pDemo2.innerHTML = "O " + produto.nome + " de " + produto.volume + " custa " + produto.valorUnitario + " reais.";
+
+    </script>
+</body>
+</html>

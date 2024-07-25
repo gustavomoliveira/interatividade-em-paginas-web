@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos JavaScript</title>
+</head>
+<body>
+
+    <p id="pessoa2"></p>
+
+    <script src="objetos.js"></script>
+
+    <script>
+
+        let gustavo = new Person("Gustavo", "Mendes", 37, "Verdes");    
+        document.write(gustavo.firstName + " " + gustavo.lastName + " " + gustavo.age + " " + gustavo.eyeColor + "<br>" + "<br>");
+
+        //Criação literal de objetos. A forma mais simples de criação de objeto.
+        let pessoa1 = {
+            nome: "Gustavo",//"nome" é o atributo e a string é o valor passado a esse atributo;
+            email: "gusmendesoliveira@gmail.com",
+            cpf: "2536475859"
+        }; //ponto e vírgula ao final da chave.
+
+        document.write(pessoa1.nome + "<br>"); //"pessoa1" é o objeto e "nome" é o atributo. esse tipo de acesso ao atributo é chamado de direto.
+        document.write(pessoa1.email + "<br>");//concatenação com tag de quebra de linha;
+        document.write(pessoa1.cpf + "<br>");
+
+        //outro exemplo de criação literal de objeto
+        let quadrado = {
+            lado: 1.2,
+            area: function() {
+                return this.lado * this.lado; //"this" é uma palavra-chave reservada que faz referência ao objeto onde THIS é usada, ou seja, substitue a necessidade de repetir o nome do objeto, no caso "quadrado".
+            }
+        }
+        /* nesse caso, apesar da criação do objeto ser literal, ja temos uma complexidade de
+        criação de atributo com um método, que é uma função. */
+        document.write("Área do quadrado: " + quadrado.area() + "<br>");
+
+        //outra forma de criação de objeto usando a palavra reservada "new"
+        let pessoa2 = new Object();
+        pessoa2.primeiroNome = "Gustavo";
+        pessoa2.sobrenome = "Mendes";
+        pessoa2.idade = "37";
+        pessoa2.nomeCompleto = function() {
+            return this.primeiroNome + " " + this.sobrenome;
+        }
+
+        document.write(`Olá, ${pessoa2.primeiroNome}. O seu sobrenome é ${pessoa2.sobrenome} e você tem ${pessoa2.idade} anos.` + "<br>");
+        document.write(pessoa2.nomeCompleto());
+
+
+    </script>
+</body>
+</html>

@@ -48,7 +48,24 @@
         }
 
         document.write(`Olá, ${pessoa2.primeiroNome}. O seu sobrenome é ${pessoa2.sobrenome} e você tem ${pessoa2.idade} anos.` + "<br>");
-        document.write(pessoa2.nomeCompleto());
+        document.write(pessoa2.nomeCompleto() + "<br>");
+
+        //criação de objeto através de Classes
+
+        let meuCarro = new Carro("Mercedes Benz", "GLC 200 4matic");
+        document.write(meuCarro.marca + " modelo " + meuCarro.modelo + "<br>");
+
+        //criação de objeto a partir de outro objeto usando o método Object.create()
+
+        const objEmpresa = {empresa: "GMO Solutions"};
+        const funcionario = Object.create(objEmpresa, {nome: {value: "Gustavo Mendes"}});
+        document.write(funcionario.empresa + " - " + funcionario.nome + "<br>");
+
+        //criação de objetos a partir de mais de um objeto usando o método Object.assign()
+
+        const objCarro = {nomeCarro: "Mercedes Benz"};
+        const funcionario1 = Object.assign({funcao: "Programador"}, objEmpresa, objCarro);
+        document.write(funcionario1.empresa + ", " + funcionario1.funcao + ", " + funcionario1.nomeCarro);
 
 
     </script>

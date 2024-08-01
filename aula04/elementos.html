@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore DOM</title>
+</head>
+<body>
+    <p id="meuID"> Esse parágrafo será selecionado pelo ID.</p>
+
+    <p>Este é o primeiro parágrafo.</p>
+    <p>Este é o segundo parágrafo. </p>
+
+    <p class="minhaClasse">Este é o primeiro parágrafo com a classe "minhaClasse".</p>
+    <p class="minhaClasse">Este é o segundo parágrafo com a classe "minhaClasse".</p>
+
+    <a href="https://www.w3schools.com">Visit W3Schools</a>
+
+    <div>
+        <p>Este parágrafo dentro da div será selecionado.</p>
+    </div>
+    <p>Este parágrafo fora da div não será selecionado.</p>
+
+    <h1>Este é um cabeçalho</h1>
+    <p>Este parágrafo imediatamente após o cabeçalho será selecionado.</p>
+    <p>Este parágrafo não será selecionado.</p>
+
+    <script>
+        let elemento = document.getElementById("meuID");
+        elemento.style.color = "red"; //modifica a cor do texto para vermelho
+
+        let elementos = document.getElementsByTagName("p");
+        for(let i = 0; i < elementos.length; i++) { //acessa todos os p através do loop for
+            elementos[i].style.color = "blue"; //modifica a cor do texto dos 3 p para azul
+        }
+        
+        let elementosClasse = document.getElementsByClassName("minhaClasse");
+        for(let i = 0; i < elementosClasse.length; i++) {
+            elementosClasse[i].style.color = "green"; //modifica a cor do texto para verde
+        }
+
+        let elementoatr = document.querySelector("[href='https://www.w3schools.com']");
+        elementoatr.style.color = "gold"; //modifica para a cor dourado o link
+
+        let elementopseudo = document.querySelector("p:first-child");
+        elementopseudo.style.color = "orange"; //modifica a cor do texto para laranja
+
+        let elementodesc = document.querySelector("div p");
+        elementodesc.style.color = "brown"; //modifica a cor do texto para marrom
+
+        let elementocomb = document.querySelector("h1 + p");
+        elementocomb.style.color = "pink"; //modifica a cor do texto para rosa
+
+        let elementosall = document.querySelectorAll("*");
+        for(let i = 0; i < elementosall.length; i++) {
+            elementosall[i].style.border = "1px dashed pink"; //adiciona uma borda pontilhada rosa a todos os elementos
+        }
+        
+    </script>
+</body>
+</html>

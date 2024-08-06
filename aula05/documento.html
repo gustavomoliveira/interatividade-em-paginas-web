@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipuladores de Atributos HTML</title>
+</head>
+<body>
+    <p id="p1" title="Texto de exemplo">Parágrafo 1</p>
+    <img id="acdog1" src="acdog1.png" alt="Cachorro do Animal Crossing">
+
+    <div id="div1">
+        <p id="pum">Este é o primeiro parágrafo. </p>
+        <p id="p2">Este é o segundo parágrafo. </p>
+    </div>
+
+    <h1 onclick="this.innerHTML='Isso acontece quando usamos o evento onClick!'"><!-- uso do this já que toda arvore DOM é composta por objetos -->
+        Clique para testar o evento onClick!</h1> <!-- programado inline para troca de texto -->
+
+    <h2 onclick="trocaTexto(this)">Clique nesse texto!</h2><!-- função com o id passado, no caso a palavra reservada this -->
+
+    <p id="pdata"> Clique no botão abaixo para mostrar a data </p>
+    <button onclick="displayDate()">Mostra data</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

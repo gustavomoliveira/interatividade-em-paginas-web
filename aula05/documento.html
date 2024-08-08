@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manipuladores de Atributos HTML</title>
 </head>
-<body>
+<body onload="checkCookies()"><!-- onload sempre no elemento body -->
     <p id="p1" title="Texto de exemplo">Parágrafo 1</p>
+
     <img id="acdog1" src="acdog1.png" alt="Cachorro do Animal Crossing">
 
     <div id="div1">
@@ -21,6 +22,25 @@
 
     <p id="pdata"> Clique no botão abaixo para mostrar a data </p>
     <button onclick="displayDate()">Mostra data</button>
+
+    <br><br> Informe seu nome: <input type="text" id="nome" oninput="tornaMaiuscula()"><!-- oninput impede o dígito de ser em minúsculo -->
+
+    <h2 onmouseover="mOver(this)" onmouseout="mOut(this)"> mova o mouse sobre </h2><!-- onmouseover é um evento predefinido do mouse. o this se refere ao h2 -->
+    <!-- criamos o onmouseout no mesmo elemento -->
+
+    <h2 onmouseover="style.color='red' "onmouseout="style.color='black'"> Mudando de cor </h2><!-- código inline -->
+
+    <p id="p5">
+        Isso é um texto<br>
+        Isso é um texto<br>
+        Isso é um texto<br>
+    </p>
+    
+    <input type="button" value="Esconte texto"
+        onclick="document.getElementById('p5').style.visibility='hidden'"><!-- botão criado para esconder texto -->
+
+    <input type="button" value="Mostra texto"
+        onclick="document.getElementById('p5').style.visibility='visible'"><!-- botão criado para mostrar texto -->
 
     <script src="script.js"></script>
 </body>

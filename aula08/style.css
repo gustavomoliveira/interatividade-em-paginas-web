@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card {
+      text-align: right;
+      font-style: italic;
+      color: gold;
+  }
+  
+  .corVermelha {
+    color: red;
+  }
+  
+  .texto {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .titulo {
+    text-align: center;
+    color: white;
+    background-color: blue;
+  }
+
+  .lista {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .lista2 {
+    background: red;
+    font-style: normal;
+    color: white;
+  }

@@ -19,7 +19,7 @@ Take the following steps:
     This will hide all the elements with myText.
 */
 
-let elementsTitle = document.querySelectorAll('.title'); //seleciona todo os elementos com a classe passada;
+let elementsTitle = document.querySelectorAll('.title'); //seleciona todos os elementos com a classe passada;
 let elementsMyText = document.querySelectorAll('.myText');
 console.log(elementsTitle);
 console.log(elementsMyText);
@@ -27,12 +27,12 @@ console.log(elementsMyText);
 elementsTitle.forEach(element => { //percorre a node.list adicionando evento de click todas as vezes que o elemento passado é clicado
     element.addEventListener('click', (e) => {
         console.log(element.nextElementSibling);
-        removeClass(); //assim que clicado é chamada uma função que remove a classe active
-        element.nextElementSibling.classList.toggle('active'); //cria um toggle para ativar e desativar a classe active
+        removeClass(); //assim que o elemento é clicado é chamada uma função que remove a classe 'active'
+        element.nextElementSibling.classList.toggle('active'); //cria um toggle para ativar e desativar a classe 'active'
     });
 });
 
-function removeClass() { //função que remove a classe dos elementos de classe myText;
+function removeClass() { //função que remove a classe 'active' dos elementos de classe myText;
     elementsMyText.forEach(el => {
         el.classList.remove('active');
     });

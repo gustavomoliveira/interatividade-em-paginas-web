@@ -1,0 +1,18 @@
+body {
+    background: #223;
+  }
+  #star,#heart {
+    font-size: 64px;
+    cursor: move;
+  }
+  
+  #star::selection, #heart::selection {
+      color: none;
+      background: none;
+      cursor: move;
+  }
+  
+  #heart {
+    left: 60px;
+    top: 60px;
+  }

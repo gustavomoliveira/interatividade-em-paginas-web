@@ -1,0 +1,9 @@
+body {
+    background: #223;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.para {
+    display: none;
+}

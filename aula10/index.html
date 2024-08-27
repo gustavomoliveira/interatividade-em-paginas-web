@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Evento onkeydown</h1>
+        <input id="inputText" type="text" onkeydown="myFunction()">
+    <p id="demo"></p>
+
+    <p>Nome</p>
+        <input type="text" id ="nome" onfocus="destacar()" onblur="normalizar()">
+    <p>Sobrenome</p>
+        <input type="text" id="sobrenome" onchange="colocarMaiuscula(this)"> <!-- uso do this para passar o próprio elemento como parâmetro; -->
+    <p></p>
+        <button>Inserir</button>
+        <br><br>
+    <select id="curso" onchange="mostraSelecao()">
+        <option value="Java">Java</option>
+        <option value="Delphi">Delphi</option>
+        <option value="Python">Python</option>
+        <option value="Kotlin">Kotlin</option>
+    </select>
+
+    <button id="botao">Escolha o curso</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

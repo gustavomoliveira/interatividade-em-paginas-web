@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Drag, Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <p>Arraste o texto entre os dois retângulos</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div><!-- o evento ondragover especifica onde os dados arrastados podem
+        ser soltos. Função que desabilita o comportamento padrão dos elesmentos em uma página. -->
+        <br>
+        <p id="drag1" draggable="true" ondragstart="drag(event)">Arraste-me</p><!-- necessário o uso de event e não this. event traz dados do evento que são necessários. -->
+        <!-- inserção do atributo draggable para garantir que o elemento <p> seja arrastável -->
+        <!-- inserção do atributo ondragstart, junto de um event, que indicará o que irá ocorrer quando o elemento for arrastado -->
+        <script src="dragndrop.js"></script>
+    </body>
+</html>

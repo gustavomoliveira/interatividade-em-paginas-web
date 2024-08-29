@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop 2</title>
+    <link rel="stylesheet" href="dragndrop2.css">
+</head>
+<body>
+    <p>Arraste o texto entre os dois retângulos</p>
+
+    <div class="alvo" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Me arraste!</p>
+    </div>
+
+    <p id="demo"></p>
+    <div class="alvo" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script src="dragndrop2.js"></script>
+</body>
+</html>

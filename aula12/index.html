@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <form>
+        <label for="fname">Primeiro nome:</label><br><br> <!-- label sempre usado para orientar uma ação que o user deve tomar -->
+        <input type="text" id="fname" name="fname" value="John"><br><br>
+        <label for="lname">Último nome:</label><br><br> <!-- o atributo 'for' faz referência ao id de mesmo nome. associa um campo ao outro-->
+        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+        
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option> 
+            <option value="saab">Saab</option>
+            <option value="mercedes benz" selected>Mercedes Benz</option> <!-- valor inicial selecionado com indicação do 'selected' -->
+            <option value="audi">Audi</option>
+        </select><br><br>
+
+        <p>Marque as <strong>disciplinas</strong> que você mais gosta:</p>
+        <input type="checkbox" id="discp1" name="discp1" value="Banco_dados">
+        <label for="discp1"> Banco de Dados </label><br>
+        
+        <input type="checkbox" id="discp2" name="discp2" value="Dev_web">
+        <label for="discp2"> Desenvolvimento Web </label><br>
+        
+        <input type="checkbox" id="discp3" name="discp3" value="Met_age">
+        <label for="discp3"> Metodologias ágeis </label><br>
+        <br>
+        <p>Escolha a sua <strong>linguagem</strong> favorita:</p> <!-- rádio utilizado para selecionar apenas uma opção -->
+        <input type="radio" id="phyton" name="fav_language" value="Phyton"> <!-- todos os botões de rádio compartilham o atributo 'name', indicando apenas uma escolha possível -->
+        <label for="phyton">PHYTON</label><br> <!-- 'name' é a identificação de uma estrutura que faz parte do mesmo grupo, diferente do 'id' que é individual -->
+                                                <!-- se o atributo 'name' for o mesmo é permitido selecionar mais de um elemento, mesmo o elemento sendo radio -->
+        <input type="radio" id="php" name="fav_language" value="php">
+        <label for="php">PHP</label></label><br>
+        
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label><br>
+        <br>
+
+        <label for="aniversario">Aniversário:</label> <!-- componente de data -->
+        <input type="date" id="aniversario" name="aniversario">
+        <br><br>
+
+        <label for="email">Informe seu email:</label> <!-- componente de email -->
+        <input type="email" id="email" name="email">
+        <br><br>
+        
+        <label for="favcolor">Selecione sua cor favorita:</label> <!-- componente utilizado para seleção de cores -->
+        <input type="color" id="favcolor" name="favcolor"> <br><br>
+        <br>
+
+        <textarea name="message" rows="10" cols="60">Aqui você pode deixar sua opinião.</textarea><br>
+        <!-- componente de texto, tipo comentário, que possui rows e cols pre definidas para tamanho da caixa -->
+        <input type="submit" value="Enviar">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

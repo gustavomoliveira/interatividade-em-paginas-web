@@ -4,56 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrícula em Cursos de Programação</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Matrícula em Cursos de Programação</h2>
     <form id="cadCurso">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome"> <!-- acessar o valor de input através do name -->
-        <br><br>
+        <input type="text" id="nome" name="nome" pattern="[A-Za-z]{5,10}" required> <!-- acessar o valor de input através do name -->
+         <!-- atributo pattern, aceita maiúsculas e minúscula e de 5 a 10 digitos no campo nome -->
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
-        <br><br>
+        <input type="email" id="email" name="email" required> <!-- required torna o campo obrigatório para envio -->
+        
+        <label for="senha">Senha (8 a 20 caracteres):</label>
+        <input type="text" name="senha" minlength="8" maxlength="20" required>
+        
         <label for="tel">Telefone:</label>
-        <input type="tel" id="phone" name="phone" placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}"> <!-- padrão para verificação de quantidade de números digitados -->
-        <br><br>
+        <input type="tel" id="phone" name="phone" required placeholder="(99) 99999-9999" pattern="\(\d{2}\) \d{5}-\d{4}"> <!-- padrão para verificação de quantidade de números digitados -->
+        
         <label for="idade">Informe sua idade:</label>
         <input type="number" id="idade" name="idade" min="10" max="150"> <!-- atributos de max e min para o elemento number que pode ser usado para limitar a entrada de idade, por exemplo -->
-        <br><br>
 
         <p>Escolha o <strong>Turno: </strong></p>
         <input type="radio" id="manha" name="turno" value="manha">
-        <label for="manha">Manhã</label><br>
+        <label for="manha">Manhã</label>
         <input type="radio" id="tarde" name="turno" value="tarde">
-        <label for="tarde">Tarde</label><br>
+        <label for="tarde">Tarde</label>
         <input type="radio" id="noite" name="turno" value="noite">
-        <label for="noite">Noite</label><br><br>
+        <label for="noite">Noite</label>
 
         <p>Escolha o <strong>Curso: </strong></p>
         <input type="checkbox" id="javaScript" name="javaScript" value="javaScript">
-        <label for="javaScript">JavaScript</label><br>
+        <label for="javaScript">JavaScript</label>
 
         <input type="checkbox" id="react" name="react" value="react">
-        <label for="react">React</label><br>
+        <label for="react">React</label>
 
         <input type="checkbox" id="angular" name="angular" value="angular">
-        <label for="angular">Angular</label><br>
+        <label for="angular">Angular</label>
 
         <input type="checkbox" id="python" name="python" value="python">
         <label for="python">Python</label><br>
 
         <input type="checkbox" id="vue" name="vue" value="vue">
-        <label for="vue">VueJS</label><br><br>
+        <label for="vue">Vue JS</label>
 
         <p>Escolha a <strong>Forma de Pagamento: </strong></p>
         <select name="pagamento" id="pagamento">
             <option value="cartaoCredito">Cartão de Crédito</option>
             <option value="boleto">Boleto</option>
             <option value="pix" selected>Pix</option>
-        </select><br><br>
+        </select><br>
         
-        <p>Escolha<strong>uma foto: </strong></p>
-        <label for="foto">Foto:</label>
+        <label for="foto">Escolha uma foto:</label>
+        <p>
         <input type="file" id="foto" name="foto" accept="image/*"> <!-- o atributo accept restringe o tipo de arquivo que pode ser usado -->
 
         <button type="submit">Enviar</button>

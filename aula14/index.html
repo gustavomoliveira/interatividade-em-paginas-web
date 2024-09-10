@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Formulário com JavaScript</h1>
+
+    <form name="form" onsubmit="return validaForm()">
+        Nome: <input type="text" name="name"/><br>
+        Idade: <input type="text" id="idade"/><br>
+        <label>Escolha o seu gênero:</label><br>
+        <input type="radio" id="masculino" name="genero" value="Masculino"> Masculino<br><!-- name sempre o mesmo para garantir uma seleção -->
+        <input type="radio" id="feminino" name="genero" value="Feminino"> Feminino<br>
+        <input type="radio" id="outro" name="genero" value="Outro"> Outro<br><br>
+        
+        <label>Escolha suas atividades favoritas:</label><br>
+        <input type="checkbox" id="esporte" name="atividades" value="Esporte"> Esporte<br><!-- no caso do checkbox o name é o mesmo para que todos os atributos sejam capturados em um array no js -->
+        <input type="checkbox" id="musica" name="atividades" value="Música"> Música<br>
+        <input type="checkbox" id="leitura" name="atividades" value="Leitura"> Leitura<br><br>
+        
+        <label for="pais">Escolha seu país:</label><br>
+        <select id="pais" name="pais">
+            <option value="">Selecione...</option>
+            <option value="Brasil">Brasil</option>
+            <option value="Portugal">Portugal</option>
+            <option value="EUA">Estados Unidos</option>
+        </select><br><br>
+        <input type="submit" value="Submit"/>
+        <button type="reset">Resetar Formulário</button>
+    </form>
+    <h2 id="dados">Dados Informados:</h2>
+    <p id="resultado"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>

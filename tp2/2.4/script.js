@@ -11,7 +11,7 @@ Exercício 4 Adicionando classes
             Utilize o ‘DOM’ para resolver o exercício.
 */
 
-
+//CLASSE CRIADA NO JS, COMO O TITULO PEDIU. TERIA SIDO MAIS FACIL CRIAR A CLASSE NO STYLE, MAS E BOM PONTUAR ISSO.
 const style = document.createElement('style');
 style.type = 'text/css';
 

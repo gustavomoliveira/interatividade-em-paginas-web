@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3.8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h3>Dados de Nacionalidade</h3>
+        <label for="pais">Qual o seu país?</label>
+        <input type="text" name="pais" id="pais"><br><br>
+
+        <label for="cor">Qual a cor principal da bandeira?</label>
+        <input type="color" name="cor" id="cor"><br><br>
+
+        <label for="descricao">Descreva o seu país: </label><br>
+        <textarea name="descricao" id="descricao" rows="10" cols="30" style="resize: none;"></textarea><br><br>
+
+        <label for="continentes">Selecione o Continente: </label><br>
+        <select name="continentes" id="continentes">
+            <option value="América">América</option>
+            <option value="África">África</option>
+            <option value="Europa">Europa</option>
+            <option value="Ásia">Ásia</option>
+            <option value="Oceania">Oceania</option>
+        </select><br><br>
+
+        <button type="submit">Enviar</button>
+
+
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>

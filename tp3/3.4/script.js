@@ -5,3 +5,6 @@ Não faça as alterações `manualmente` no arquivo `index.html`.
 Utilize o `DOM` para resolver o exercício.
 */
 
+window.onload = () => {
+    document.body.style.fontWeight = 'bold';
+}

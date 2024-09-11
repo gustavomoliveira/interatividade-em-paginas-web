@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3.12</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    
+    <div id="novo" style="display: flex">
+      <div id="target" class="caixinha corVermelha" draggable="true" ondragstart="start(event)"></div>
+      <div id="target2" class="caixinha corRoxa" draggable="true" ondragstart="start(event)"></div>
+      <div id="target3" class="caixinha corLaranja" draggable="true" ondragstart="start(event)"></div>
+      <div id="target4" class="caixinha corVermelha" draggable="true" ondragstart="start(event)"></div>
+    </div>
+
+    <h3>Container 1</h3>
+    <div class="container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <h3>Container 2</h3>
+    <div class="container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

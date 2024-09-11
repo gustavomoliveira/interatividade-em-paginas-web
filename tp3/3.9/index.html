@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP 3.9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" placeholder="Digite seu nome">
+
+        <p>Selecione seu nível: </p>
+        <input type="radio" name="nivel" id="senior" value="Senior">
+        <label for="senior">Sênior</label><br>
+        <input type="radio" name="nivel" id="pleno" value="Pleno">
+        <label for="pleno">Pleno</label><br>
+        <input type="radio" name="nivel" id="junior" value="Junior">
+        <label for="junior">Junior</label><br>
+
+        <p>Selecione sua(s) possibilidade(s) de horário:</p>
+        <input type="checkbox" name="presencial" id="presencial" value="Presencial">
+        <label for="presencial">Presencial</label><br>
+        <input type="checkbox" name="hibrido" id="hibrido" value="Híbrido">
+        <label for="hibrido">Híbrido</label><br>
+        <input type="checkbox" name="remoto" id="remoto" value="Remoto">
+        <label for="remoto">Remoto</label><br><br>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>

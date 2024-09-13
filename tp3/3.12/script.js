@@ -8,7 +8,7 @@ Faça as modificações necessárias no arquivo “index.html” para resolver o
 */
 
 function start(event) {
-    event.dataTransfer.setData('text/plain', event.target.id)
+    event.dataTransfer.setData('text/plain', event.target.id);
 }
 
 function allowDrop(event) {

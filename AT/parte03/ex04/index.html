@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 03 - Exercício 04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Entre 3 e 10 caracteres">
+        <div id="erroNome"></div><br>
+        
+        <p>Selecione a(s) área(s) desejadas:</p>
+        <input type="checkbox" name="javascript" id="javascript" class="area">
+        <label for="javascript">JavaScript</label><br>
+        <input type="checkbox" name="python" id="python" class="area">
+        <label for="python">Python</label><br>
+        <input type="checkbox" name="ruby" id="ruby" class="area">
+        <label for="ruby">Ruby</label><br>
+        <div id="erroArea"></div><br>
+    
+        <label for="cpf">CPF:</label>
+        <input type="text" name="cpf" id="cpf" placeholder="999.999.999-99">
+        <div id="erroCpf"></div><br><br>
+
+        <label for="data">Data:</label>
+        <input type="text" name="data" id="data" placeholder="Formato dd/mm/aaaa">
+        <div id="erroData"></div><br><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" placeholder="'Rua...'">
+        <div id="erroEndereco"></div><br><br>
+    
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>

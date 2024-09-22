@@ -1,0 +1,9 @@
+.card {
+    width: 150px;
+    height: 150px;
+    border: 2px solid green;
+}
+
+.corVermelha {
+    color: red;
+}

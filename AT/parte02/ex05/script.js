@@ -13,6 +13,6 @@ input.addEventListener('keydown', function(event) {
 
 input.addEventListener('blur', () => {
     if(input.value.trim() !== '') {
-        console.log(input.value) 
+        alert('Conteúdo digitado: ' + input.value); 
     } 
 });
